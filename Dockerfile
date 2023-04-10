@@ -1,6 +1,6 @@
-FROM  ubuntu:latest
+FROM  centos:latest
 MAINTAINER kumareshrangasamy03@gmail.com
-RUN apt install -y httpd \
+RUN yum install -y httpd \
  zip\
  unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
@@ -12,7 +12,7 @@ CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
  
  
-# FROM  ubuntu:latest
+# FROM  centos:latest
 # MAINTAINER kumareshrangasamy03@gmail.com
 # RUN yum install -y httpd \
 #  zip\
